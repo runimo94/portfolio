@@ -1,24 +1,69 @@
-<nav class="fixed w-full flex justify-end sm:justify-center items-center bg-slate-500 p-4 h-16">
-  <ul class="hidden sm:flex flex-row gap-x-16 md:gap-x-24 xl:gap-x-36 text-xl text-white font-semibold">
-    <li>Inicio</li>
-    <li>Proyectos</li>
-    <li>Habilidades</li>
-    <li>Contacto</li>
-  </ul>
-  <button class="text-white inline sm:hidden mr-4">Click</button>
+<nav
+  class="fixed w-full flex justify-end sm:justify-center items-center p-4 h-16 backdrop-filter backdrop-blur bg-black/30"
+>
+  <div
+    class="hidden sm:flex flex-row gap-x-6 md:gap-x-12 lg:gap-x-24 xl:gap-x-32 text-xl text-white font-Rubik"
+  >
+    <button class="rounded-xl hover:bg-white/5 py-3 px-5">Inicio</button>
+    <button class="rounded-xl hover:bg-white/5 py-3 px-5">Proyectos</button>
+    <button class="rounded-xl hover:bg-white/5 py-3 px-5">Habilidades</button>
+    <button class="rounded-xl hover:bg-white/5 py-3 px-5">Contacto</button>
+  </div>
+  <button
+    class="togglemenu rounded-xl hover:bg-white/5 py-1 px-2 inline sm:hidden mr-4"
+  >
+    <i class="fa fa-bars text-white text-xl" aria-hidden="true"></i>
+  </button>
+</nav>
 
-  <div class="fixed hidden flex-col gap-y-6 p-5 top-0 bottom-0 right-0 w-72 bg-slate-800">
-
-    <div class="w-full flex justify-end">
-      <button class="text-white">Click</button>
+<nav id="rigthSideNav" class="hidden">
+  <div
+    class="fixed flex flex-col gap-y-6 p-5 top-0 bottom-0 right-0 w-72 backdrop-filter backdrop-blur bg-black/70"
+  >
+    <div class="w-full flex justify-end pr-3">
+      <button class="togglemenu rounded-xl hover:bg-white/5 py-1 px-3">
+        <i class="fa fa-times text-white text-xl" aria-hidden="true"></i>
+      </button>
     </div>
 
-    <ul class="text-white font-semibold text-xl flex flex-col gap-y-5 items-center">
-      <li>Inicio</li>
-      <li>Proyectos</li>
-      <li>Habilidades</li>
-      <li>Contacto</li>
-    </ul>
-
+    <div class="text-white font-semibold text-xl flex flex-col items-center font-Rubik">
+      <button class="w-full rounded-xl hover:bg-white/5 py-3 px-5"
+        >Inicio</button
+      >
+      <button class="w-full rounded-xl hover:bg-white/5 py-3 px-5"
+        >Proyectos</button
+      >
+      <button class="w-full rounded-xl hover:bg-white/5 py-3 px-5">
+        Habilidades
+      </button>
+      <button class="w-full rounded-xl hover:bg-white/5 py-3 px-5"
+        >Contacto</button
+      >
+    </div>
   </div>
 </nav>
+
+<script>
+  const sidenav = document.getElementById("rigthSideNav");
+  const buttonsToggle = document.querySelectorAll("button.togglemenu");
+  const buttonsHeader = document.querySelectorAll(
+    "button:not(.togglemenu):not(.w-full)"
+  );
+  const buttonsSideNav = document.querySelectorAll("button.w-full");
+
+  function toggleMenu() {
+    sidenav?.classList.toggle("hidden");
+  }
+
+  buttonsToggle.forEach((button) => {
+    button.addEventListener("click", toggleMenu);
+  });
+
+  //TODO Falta añadir los scroll hacia distintas secciones al hacer click en los botones. Los botones del header tienen que ser behavior smooth y auto los del sidenav
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 640) {
+      sidenav?.classList.add("hidden");
+    }
+  });
+</script>
