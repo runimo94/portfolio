@@ -1,0 +1,28 @@
+---
+interface Props {
+  image: string;
+  title:string;
+  urlCode:string;
+  url:string;
+}
+
+const { image, title, urlCode, url } = Astro.props as Props;
+---
+
+<div class="w-[300px] h-[440px] lg:w-[330px] lg:h-[470px]
+flex flex-col justify-between pb-5 shadow-2xl rounded-lg gap-y-4 backdrop-filter backdrop-blur bg-black/50">
+  <img class="rounded-t-lg" src={image} alt="imagen del proyecto">
+  <h1 class="text-white text-xl text-center p-3 font-LexendDeca">
+    {title}
+  </h1>
+  <div class="flex flex-row justify-evenly gap-x-4">
+    <a href={urlCode} class="flex items-center justify-center text-white text-lg text-center font-LexendDeca w-32 h-12 hover:bg-white/10">
+      <i class="fa fa-code mr-3" aria-hidden="true"></i>
+      Código
+    </a >
+    <a href={url} class="flex items-center justify-center text-white text-lg text-center font-LexendDeca w-32 h-12 hover:bg-white/10">
+      <i class="fa fa-link mr-3" aria-hidden="true"></i>
+      Ver
+    </a>
+  </div>
+</div>
