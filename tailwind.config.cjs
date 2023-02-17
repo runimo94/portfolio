@@ -4,11 +4,17 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        myBackground: "url(bg-blurry.svg)",
+        myBackground2: "url(bg-blurry.svg)",
+        myBackground: "url(bg.jpg)",
+        myBackground_sm: "url(bg-sm.jpg)",
       },
       fontFamily: {
         Rubik: ["Rubik", "sans-serif"],
         LexendDeca: ["Lexend Deca", "sans-serif"],
+      },
+      colors: {
+        color1: "#a240fd",
+        color2: "#10c0ec",
       },
     },
   },
