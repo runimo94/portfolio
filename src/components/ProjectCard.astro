@@ -1,5 +1,5 @@
 ---
-import IconTech from "./IconTech.astro"
+import IconTech from "./IconTech.astro";
 
 interface Props {
   image: string;
@@ -15,17 +15,17 @@ const { image, title, urlCode, url, techIcons } = Astro.props as Props;
 <div
   class="w-[300px] h-[480px] lg:w-[330px] lg:h-[500px] xl:w-[300px] xl:h-[500px] flex flex-col justify-between pb-5 shadow-2xl rounded-lg gap-y-4 backdrop-filter backdrop-blur bg-black/50"
 >
-  <a href={url}><img class="rounded-t-lg" src={image} alt="imagen del proyecto" /></a>
+  <a href={url}
+    ><img class="rounded-t-lg" src={image} alt="imagen del proyecto" /></a
+  >
   <h1 class="text-white text-xl text-center p-3 font-LexendDeca">
     {title}
   </h1>
 
   <div class="flex items-center justify-center gap-x-2">
     {
-      techIcons.map((tech) =>{
-        return(
-          <IconTech size="w-8" tech={tech}/>
-        )
+      techIcons.map((tech) => {
+        return <IconTech classes="w-8" tech={tech} />;
       })
     }
   </div>
