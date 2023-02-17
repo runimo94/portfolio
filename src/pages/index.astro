@@ -2,19 +2,26 @@
 import Layout from "../components/Layout.astro";
 import Header from "../components/HeaderNav.astro";
 import Inicio from "../components/Inicio.astro";
-
+import AboutMe from "../components/Aboutme.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout>
-	<div class="w-screen">
-		
-			<Header/>
+  <div class="w-screen">
+    <Header />
 
-			<div class="flex flex-col items-center gap-y-16 py-32 px-6 sm:px-10 md:px-20 lg:px-36 xl:px-40 2xl:px-72 w-full">
-				<!--Contenido-->
+    <div class="flex flex-col items-center gap-y-16 py-32 w-full">
+      <div class="px-6 sm:px-10 md:px-20 lg:px-24 2xl:px-72">
+        <Inicio />
+      </div>
 
-				<Inicio/>
+      <div class="flex flex-col items-center py-10 sm:px-10 md:px-20 lg:px-36 xl:px-40 2xl:px-72 bg-gray-900 gap-y-28 w-full">
+        <AboutMe />
+        <Projects />
+      </div>
 
-			</div>
-	</div>
+			<div class="mb-32"></div>
+
+    </div>
+  </div>
 </Layout>
