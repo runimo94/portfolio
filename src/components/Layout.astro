@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth" style="scroll-padding-top: 50px;">
   <head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Rubik&family=Lexend+Deca" rel="stylesheet">
-		<link rel="stylesheet" href="/all.css">
-		<title>Runimo94</title>
-	</head>
-		<body class="bg-myBackground_sm xl:bg-myBackground bg-cover bg-no-repeat bg-fixed">
-  <slot/>
-</body>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&family=Lexend+Deca"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/all.css" />
+    <style>
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #1f1f1f #3a3a3b;
+				overflow-x: hidden;
+      }
+      *::-webkit-scrollbar {
+        width: 10px;
+        background-color: #3a3a3b;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #1f1f1f;
+        border-radius: 20px;
+      }
+    </style>
+    <title>Runimo94</title>
+  </head>
+  <body
+    class="bg-myBackground_sm xl:bg-myBackground bg-cover bg-no-repeat bg-fixed"
+  >
+    <slot />
+  </body>
 </html>
