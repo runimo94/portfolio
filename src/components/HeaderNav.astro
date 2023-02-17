@@ -1,16 +1,25 @@
+---
+import { dataHeader } from "../config/config";
+---
+
 <nav
-  class="fixed w-full flex justify-end sm:justify-center items-center p-4 h-16 backdrop-filter backdrop-blur bg-black/30"
+  class="fixed z-10 w-full flex justify-end md:justify-center items-center p-4 h-16 backdrop-filter backdrop-blur bg-black/30"
 >
   <div
-    class="hidden sm:flex flex-row gap-x-6 md:gap-x-12 lg:gap-x-24 xl:gap-x-32 text-xl text-white font-Rubik"
+    class="hidden md:flex flex-row gap-x-6 md:gap-x-8 lg:gap-x-20 xl:gap-x-32 text-xl text-white whitespace-nowrap font-Rubik"
   >
-    <button class="rounded-xl hover:bg-white/5 py-3 px-5">Inicio</button>
-    <button class="rounded-xl hover:bg-white/5 py-3 px-5">Proyectos</button>
-    <button class="rounded-xl hover:bg-white/5 py-3 px-5">Habilidades</button>
-    <button class="rounded-xl hover:bg-white/5 py-3 px-5">Contacto</button>
+    {
+      dataHeader.listSections.map((section) => {
+        return(
+          <>
+            <a href={section.id} class="rounded-xl hover:bg-white/5 py-3 px-5">{section.text}</a>
+          </>
+        )
+      })
+    }
   </div>
   <button
-    class="togglemenu rounded-xl hover:bg-white/5 py-1 px-2 inline sm:hidden mr-4"
+    class="togglemenu rounded-xl hover:bg-white/5 py-1 px-2 inline md:hidden mr-4"
   >
     <i class="fa fa-bars text-white text-xl" aria-hidden="true"></i>
   </button>
@@ -18,7 +27,7 @@
 
 <nav id="rigthSideNav" class="hidden">
   <div
-    class="fixed flex flex-col gap-y-6 p-5 top-0 bottom-0 right-0 w-72 backdrop-filter backdrop-blur bg-black/70"
+    class="z-20 fixed flex flex-col gap-y-6 p-5 top-0 bottom-0 right-0 w-72 backdrop-filter backdrop-blur bg-black/70"
   >
     <div class="w-full flex justify-end pr-3">
       <button class="togglemenu rounded-xl hover:bg-white/5 py-1 px-3">
@@ -27,18 +36,15 @@
     </div>
 
     <div class="text-white font-semibold text-xl flex flex-col items-center font-Rubik">
-      <button class="w-full rounded-xl hover:bg-white/5 py-3 px-5"
-        >Inicio</button
-      >
-      <button class="w-full rounded-xl hover:bg-white/5 py-3 px-5"
-        >Proyectos</button
-      >
-      <button class="w-full rounded-xl hover:bg-white/5 py-3 px-5">
-        Habilidades
-      </button>
-      <button class="w-full rounded-xl hover:bg-white/5 py-3 px-5"
-        >Contacto</button
-      >
+      {
+        dataHeader.listSections.map((section) => {
+          return(
+            <>
+              <a href={section.id} class="w-full rounded-xl text-center hover:bg-white/5 py-3 px-5">{section.text}</a>
+            </>
+          )
+        })
+      }
     </div>
   </div>
 </nav>
@@ -46,10 +52,7 @@
 <script>
   const sidenav = document.getElementById("rigthSideNav");
   const buttonsToggle = document.querySelectorAll("button.togglemenu");
-  const buttonsHeader = document.querySelectorAll(
-    "button:not(.togglemenu):not(.w-full)"
-  );
-  const buttonsSideNav = document.querySelectorAll("button.w-full");
+  const anchorSideNav = document.querySelectorAll("a.w-full");
 
   function toggleMenu() {
     sidenav?.classList.toggle("hidden");
@@ -59,7 +62,9 @@
     button.addEventListener("click", toggleMenu);
   });
 
-  //TODO Falta añadir los scroll hacia distintas secciones al hacer click en los botones. Los botones del header tienen que ser behavior smooth y auto los del sidenav
+  anchorSideNav.forEach((a) => {
+    a.addEventListener("click", toggleMenu)
+  })
 
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 640) {
