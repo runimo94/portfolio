@@ -1,0 +1,26 @@
+---
+interface IconDictionary<T> {
+  [clave: string]: T;
+}
+
+const IconDict: IconDictionary<any> = {
+  angular : 'icons/angular.svg',
+  astro : 'icons/astro.svg',
+  tailwind : 'icons/tailwindcss.svg',
+  js : 'icons/javascript.svg',
+  css : 'icons/css3.svg',
+  html : 'icons/html5.svg',
+  react : 'icons/react.svg',
+};
+
+export interface Props {
+  tech: string;
+  size: string;
+}
+
+const {tech, size} = Astro.props as Props
+
+const component = IconDict[tech]
+---
+
+<img src={component} alt={tech} class={size}>
