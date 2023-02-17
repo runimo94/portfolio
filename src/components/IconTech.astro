@@ -4,23 +4,44 @@ interface IconDictionary<T> {
 }
 
 const IconDict: IconDictionary<any> = {
-  angular : 'icons/angular.svg',
-  astro : 'icons/astro.svg',
-  tailwind : 'icons/tailwindcss.svg',
-  js : 'icons/javascript.svg',
-  css : 'icons/css3.svg',
-  html : 'icons/html5.svg',
-  react : 'icons/react.svg',
+  angular: "icons/angular.svg",
+  astro: "icons/astro.svg",
+  tailwind: "icons/tailwindcss.svg",
+  javascript: "icons/javascript.svg",
+  css: "icons/css3.svg",
+  html: "icons/html5.svg",
+  react: "icons/react.svg",
 };
 
 export interface Props {
   tech: string;
-  size: string;
+  classes: string;
 }
 
-const {tech, size} = Astro.props as Props
+const { tech, classes } = Astro.props as Props;
 
-const component = IconDict[tech]
+const component = IconDict[tech];
 ---
 
-<img src={component} alt={tech} class={size}>
+<div class="relative">
+  <img src={component} alt={tech} class={classes + " tooltip-reciever"} />
+  <div
+    class="tooltip uppercase text-sm font-Rubik px-2 bg-slate-300 rounded whitespace-nowrap"
+  >
+    {tech}
+  </div>
+</div>
+
+<style>
+  .tooltip-reciever:hover ~ .tooltip {
+    opacity: 1;
+  }
+  .tooltip {
+    position: absolute;
+    bottom: 105%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.2s;
+  }
+</style>
