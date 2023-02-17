@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        myBackground2: "url(bg-blurry.svg)",
-        myBackground: "url(bg.jpg)",
-        myBackground_sm: "url(bg-sm.jpg)",
+        myBackground2: "url(images/bg-blurry.svg)",
+        myBackground: "url(images/bg.jpg)",
+        myBackground_sm: "url(images/bg-sm.jpg)",
+        myBackground_blurry: "url(images/bg-blurry-2.svg)",
       },
       fontFamily: {
         Rubik: ["Rubik", "sans-serif"],
