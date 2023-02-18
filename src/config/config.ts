@@ -74,3 +74,37 @@ export const dataProjects = {
     },
   ],
 };
+
+export const dataSkills = {
+  skills: {
+    FrontEnd: {
+      skillName: "FrontEnd",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aut debitis possimus repudiandae harum culpa, amet blanditiis vitae, dolorum dignissimos illum aliquam suscipit, itaque odio libero? Aliquid maxime asperiores unde quaerat, sequi illum voluptate reiciendis magni aut ipsam harum quidem eaque fugit saepe? Odit, quod sequi commodi dolores eaque illum.",
+      techIcons: ["html", "tailwind", "javascript", "astro"],
+    },
+
+    BackEnd: {
+      skillName: "BackEnd",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aut debitis possimus repudiandae harum culpa, amet blanditiis vitae, dolorum dignissimos illum aliquam suscipit, itaque odio libero? Aliquid maxime asperiores unde quaerat, sequi illum voluptate reiciendis magni aut ipsam harum quidem eaque fugit saepe? Odit, quod sequi commodi dolores eaque illum.",
+      techIcons: ["html", "tailwind", "javascript", "astro"],
+    },
+
+    DesarrolloMovil: {
+      skillName: "Desarrollo Movil",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aut debitis possimus repudiandae harum culpa, amet blanditiis vitae, dolorum dignissimos illum aliquam suscipit, itaque odio libero? Aliquid maxime asperiores unde quaerat, sequi illum voluptate reiciendis magni aut ipsam harum quidem eaque fugit saepe? Odit, quod sequi commodi dolores eaque illum.",
+      techIcons: ["html", "tailwind", "javascript", "astro"],
+    },
+
+    DesarrolloEscritorio: {
+      skillName: "Desarrollo de Escritorio",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aut debitis possimus repudiandae harum culpa, amet blanditiis vitae, dolorum dignissimos illum aliquam suscipit, itaque odio libero? Aliquid maxime asperiores unde quaerat, sequi illum voluptate reiciendis magni aut ipsam harum quidem eaque fugit saepe? Odit, quod sequi commodi dolores eaque illum.",
+      techIcons: ["html", "tailwind", "javascript", "astro"],
+    },
+
+    ControlVersiones: {
+      skillName: "Control de versiones",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aut debitis possimus repudiandae harum culpa, amet blanditiis vitae, dolorum dignissimos illum aliquam suscipit, itaque odio libero? Aliquid maxime asperiores unde quaerat, sequi illum voluptate reiciendis magni aut ipsam harum quidem eaque fugit saepe? Odit, quod sequi commodi dolores eaque illum.",
+      techIcons: ["html", "tailwind", "javascript", "astro"],
+    },
+  },
+};
