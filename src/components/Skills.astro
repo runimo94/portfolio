@@ -1,0 +1,28 @@
+---
+import ButtonSkill from "./ButtonSkill.astro";
+import SkillCard from "./SkillCard.astro";
+
+import { dataSkills } from '../config/config'
+const { skills } = dataSkills;
+const { FrontEnd } = skills;
+---
+
+<section id="Habilidades" class="flex flex-col gap-y-10 w-full h-[800px]">
+  <div class="flex flex-col px-5 md:px-0 gap-y-2">
+    <h1 class="text-white text-5xl font-Rubik text-center md:text-start">
+      HABILIDADES
+    </h1>
+    <hr />
+  </div>
+
+  <div class="flex flex-row gap-x-5">
+    <div class="flex flex-col items-start text-white w-96">
+      <ButtonSkill text="FrontEnd"/>
+      <ButtonSkill text="BackEnd"/>
+      <ButtonSkill text="Desarrollo Movil"/>
+      <ButtonSkill text="Desarrollo de Escritorio"/>
+      <ButtonSkill text="Control de versiones"/>
+    </div>
+    <SkillCard skill={skills["FrontEnd"]}/>
+  </div>
+</section>
