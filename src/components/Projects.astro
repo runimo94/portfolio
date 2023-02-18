@@ -13,9 +13,7 @@ import {dataProjects} from "../config/config"
     {
       dataProjects.listProjects.map((project) => {
         return(
-          <>
             <ProjectCard image={project.image} title={project.title} urlCode={project.urlCode} url={project.url} techIcons={project.techIcons}/>
-          </>
         )
       })
     }
