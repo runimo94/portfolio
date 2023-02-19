@@ -5,7 +5,7 @@ import { dataSkills } from "../config/config";
 const { skills } = dataSkills;
 ---
 
-<section id="Habilidades" class="flex flex-col gap-y-10 w-full h-[800px]">
+<section id="Habilidades" class="flex flex-col gap-y-10 w-full">
   <div class="flex flex-col px-5 md:px-0 gap-y-2">
     <h1 class="text-white text-5xl font-Rubik text-center md:text-start">
       HABILIDADES
@@ -13,8 +13,10 @@ const { skills } = dataSkills;
     <hr />
   </div>
 
-  <div class="flex gap-x-24 py-5 justify-center">
-    <div class="flex flex-col items-start text-white w-[20rem]">
+  <div
+    class="flex flex-row gap-x-24 gap-y-5 py-5 px-0 lg:px-20 justify-center items-center lg:items-start"
+  >
+    <div class="hidden lg:flex flex-col items-start text-white w-[20rem]">
       {
         skills.map((skills) => {
           return (
@@ -28,11 +30,13 @@ const { skills } = dataSkills;
         })
       }
     </div>
+    <div class="flex flex-col w-full px-10 gap-y-5">
       {
         skills.map((skill) => {
-          return <SkillCard skill={skill} />;
+          return <SkillCard skill={skill}/>;
         })
       }
+    </div>
   </div>
 </section>
 
@@ -57,11 +61,33 @@ const { skills } = dataSkills;
     }
   }
 
+  function loadCards(cards: any) {
+    cards.forEach((card: any, index: number) => {
+      toggleCard(card, false);
+    });
+    toggleCard(cards[0], true);
+  }
+
   const buttons = document.querySelectorAll(".button-skill");
   const cards = document.querySelectorAll(".skill-card");
 
-  activateStyleButton(buttons[0]);
-  toggleCard(cards[0], true);
+  window.addEventListener("load", () => {
+    if (window.innerWidth > 1024) loadCards(cards);
+
+    activateStyleButton(buttons[0]);
+  });
+
+  window.onresize = () => {
+    if (window.innerWidth < 1024) {
+      cards.forEach((card) => {
+        toggleCard(card, true);
+      });
+    } else {
+      cards.forEach((card, index) => {
+        if (index !== 0) toggleCard(card, false);
+      });
+    }
+  };
 
   function displayCard(button: any) {
     const cardId = button.dataset["idCard"];
