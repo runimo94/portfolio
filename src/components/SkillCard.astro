@@ -3,18 +3,22 @@ import IconTech from "./IconTech.astro";
 
 interface Props {
   skill: {
+    id: string;
     skillName: string;
     text: string;
-    techIcons: string[]
-  }
+    techIcons: string[];
+  };
 }
 
-const { skill } = Astro.props as Props
+const { skill } = Astro.props as Props;
 ---
 
-<div class="flex flex-col justify-around gap-y-5 w-full h-96 bg-slate-800 p-10 rounded-3xl">
+<div
+  id={skill.id}
+  class="skill-card hidden flex-col justify-around gap-y-5 w-full h-96 bg-slate-800 p-10 rounded-3xl"
+>
   <h1 class="text-white text-3xl font-LexendDeca">
-    { skill.skillName }
+    {skill.skillName}
   </h1>
   <p class="text-white text-start">
     {skill.text}

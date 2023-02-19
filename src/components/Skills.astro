@@ -1,10 +1,8 @@
 ---
-import ButtonSkill from "./ButtonSkill.astro";
 import SkillCard from "./SkillCard.astro";
 
-import { dataSkills } from '../config/config'
+import { dataSkills } from "../config/config";
 const { skills } = dataSkills;
-const { FrontEnd } = skills;
 ---
 
 <section id="Habilidades" class="flex flex-col gap-y-10 w-full h-[800px]">
@@ -17,12 +15,84 @@ const { FrontEnd } = skills;
 
   <div class="flex flex-row gap-x-5">
     <div class="flex flex-col items-start text-white w-96">
-      <ButtonSkill text="FrontEnd"/>
-      <ButtonSkill text="BackEnd"/>
-      <ButtonSkill text="Desarrollo Movil"/>
-      <ButtonSkill text="Desarrollo de Escritorio"/>
-      <ButtonSkill text="Control de versiones"/>
+      {
+        skills.map((skills) => {
+          return (
+            <button
+              data-id-card={skills.id}
+              class="button-skill skill-button-disable"
+            >
+              {skills.skillName}
+            </button>
+          );
+        })
+      }
     </div>
-    <SkillCard skill={skills["FrontEnd"]}/>
+    {
+      skills.map((skill) => {
+        return <SkillCard skill={skill} />;
+      })
+    }
   </div>
 </section>
+
+<script>
+  function activateStyleButton(button: any) {
+    button.classList.remove("skill-button-disable");
+    button.classList.add("skill-button-activate");
+  }
+
+  function disableStyleButton(button: any) {
+    button.classList.remove("skill-button-activate");
+    button.classList.add("skill-button-disable");
+  }
+
+  function toggleCard(card: any, display: boolean) {
+    if (display) {
+      card.classList.remove("hidden");
+      card.classList.add("flex");
+    } else {
+      card.classList.add("hidden");
+      card.classList.remove("flex");
+    }
+  }
+
+  const buttons = document.querySelectorAll(".button-skill");
+  const cards = document.querySelectorAll(".skill-card");
+
+  activateStyleButton(buttons[0]);
+  toggleCard(cards[0], true);
+
+  function displayCard(button: any) {
+    const cardId = button.dataset["idCard"];
+    const card = document.getElementById(cardId);
+
+    toggleCard(card, true);
+
+    activateStyleButton(button);
+
+    document.querySelectorAll(".skill-card").forEach((skillCard) => {
+      if (skillCard.id !== cardId) {
+        toggleCard(skillCard, false);
+      }
+    });
+
+    buttons.forEach((btn) => {
+      if (btn !== button) disableStyleButton(btn);
+    });
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", displayCard.bind(null, button));
+  });
+</script>
+
+<style>
+  .skill-button-activate {
+    @apply border-color2 bg-color2Darker text-start uppercase w-full p-4 border-l-4 font-Rubik;
+  }
+
+  .skill-button-disable {
+    @apply border-slate-800 text-start uppercase w-full p-4 border-l-4 font-Rubik;
+  }
+</style>
