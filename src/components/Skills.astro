@@ -62,7 +62,7 @@ const { skills } = dataSkills;
   }
 
   function loadCards(cards: any) {
-    cards.forEach((card: any, index: number) => {
+    cards.forEach((card: any) => {
       toggleCard(card, false);
     });
     toggleCard(cards[0], true);
