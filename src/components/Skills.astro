@@ -13,8 +13,8 @@ const { skills } = dataSkills;
     <hr />
   </div>
 
-  <div class="flex flex-row gap-x-5">
-    <div class="flex flex-col items-start text-white w-96">
+  <div class="flex gap-x-24 py-5 justify-center">
+    <div class="flex flex-col items-start text-white w-[20rem]">
       {
         skills.map((skills) => {
           return (
@@ -28,11 +28,11 @@ const { skills } = dataSkills;
         })
       }
     </div>
-    {
-      skills.map((skill) => {
-        return <SkillCard skill={skill} />;
-      })
-    }
+      {
+        skills.map((skill) => {
+          return <SkillCard skill={skill} />;
+        })
+      }
   </div>
 </section>
 
@@ -89,10 +89,10 @@ const { skills } = dataSkills;
 
 <style>
   .skill-button-activate {
-    @apply border-color2 bg-color2Darker text-start uppercase w-full p-4 border-l-4 font-Rubik;
+    @apply border-color2 bg-color2Darker text-start uppercase w-full p-4 border-l-4 font-Rubik whitespace-nowrap;
   }
 
   .skill-button-disable {
-    @apply border-slate-800 text-start uppercase w-full p-4 border-l-4 font-Rubik;
+    @apply border-slate-800 text-start uppercase w-full p-4 border-l-4 font-Rubik whitespace-nowrap;
   }
 </style>
