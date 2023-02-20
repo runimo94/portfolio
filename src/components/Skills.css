@@ -1,0 +1,7 @@
+.skill-button-activate {
+  @apply border-color2 bg-color2Darker text-start uppercase w-full p-4 border-l-4 font-Rubik whitespace-nowrap;
+}
+
+.skill-button-disable {
+  @apply border-slate-800 text-start uppercase w-full p-4 border-l-4 font-Rubik whitespace-nowrap;
+}

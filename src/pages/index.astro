@@ -4,7 +4,8 @@ import Header from "../components/HeaderNav.astro";
 import Inicio from "../components/Inicio.astro";
 import AboutMe from "../components/Aboutme.astro";
 import Projects from "../components/Projects.astro";
-import Skills from "../components/Skills.astro";
+//import Skills from "../components/Skills.astro";
+import Skills from "../components/Skills.jsx";
 ---
 
 <Layout>
@@ -20,7 +21,7 @@ import Skills from "../components/Skills.astro";
         <div class="flex flex-col items-center container bg-gray-900 gap-y-28 ">
         <AboutMe />
         <Projects />
-        <Skills/>
+        <Skills client:only/>
         </div>
       </div>
 

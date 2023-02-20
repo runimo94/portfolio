@@ -1,0 +1,11 @@
+.tooltip-reciever:hover ~ .tooltip {
+  opacity: 1;
+}
+.tooltip {
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 0.2s;
+}

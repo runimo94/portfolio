@@ -1,0 +1,85 @@
+import { useState, useEffect } from "react";
+
+import SkillCard from "./SkillCard.jsx";
+import "./Skills.css";
+
+import { dataSkills } from "../config/config";
+const { skills } = dataSkills;
+
+export const SkillsComponent = () => {
+  const [selectedCard, setSelectedCard] = useState(skills[0].id);
+  const [showAllCards, setShowAllCards] = useState(false);
+
+  const handleButtonClick = (skillId) => {
+    setSelectedCard(skillId);
+  };
+
+  const showInfoCard = (skillId) => {
+    if (skillId !== selectedCard) {
+      setSelectedCard(skillId);
+    } else {
+      setSelectedCard("");
+    }
+  };
+
+  const handleResize = () => {
+    if (window.innerWidth < 1024) {
+      setShowAllCards(true);
+    } else {
+      setShowAllCards(false);
+    }
+  };
+
+  useEffect(() => {
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <section id="Habilidades" className="flex flex-col gap-y-10 w-full">
+      <div className="flex flex-col px-5 md:px-0 gap-y-2">
+        <h1 className="text-white text-5xl font-Rubik text-center md:text-start">
+          HABILIDADES
+        </h1>
+        <hr />
+      </div>
+
+      <div className="flex flex-row gap-x-24 gap-y-5 py-5 px-0 lg:px-20 justify-center items-center lg:items-start">
+        <div className="hidden lg:flex flex-col items-start text-white w-[20rem]">
+          {skills.map((skill) => {
+            return (
+              <button
+                key={skill.id}
+                onClick={() => handleButtonClick(skill.id)}
+                className={
+                  (selectedCard === skill.id
+                    ? "skill-button-activate"
+                    : "skill-button-disable") + " button-skill"
+                }
+              >
+                {skill.skillName}
+              </button>
+            );
+          })}
+        </div>
+        <div className="flex flex-col w-full px-10 gap-y-5">
+          {skills.map((skill) => {
+            return (
+              <SkillCard
+                key={skill.id}
+                skill={skill}
+                active={selectedCard === skill.id || showAllCards}
+                buttonClick={showInfoCard}
+                showInfo={selectedCard === skill.id}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SkillsComponent;
