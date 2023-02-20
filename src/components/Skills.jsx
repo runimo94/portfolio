@@ -9,6 +9,7 @@ const { skills } = dataSkills;
 export const SkillsComponent = () => {
   const [selectedCard, setSelectedCard] = useState(skills[0].id);
   const [showAllCards, setShowAllCards] = useState(false);
+  const [flagExecuteCode, setFlagExecuteCode] = useState(false);
 
   const handleButtonClick = (skillId) => {
     setSelectedCard(skillId);
@@ -23,10 +24,15 @@ export const SkillsComponent = () => {
   };
 
   const handleResize = () => {
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth < 1024 && !flagExecuteCode) {
       setShowAllCards(true);
-    } else {
+      setSelectedCard("");
+      setFlagExecuteCode(true);
+    }
+    if (window.innerWidth >= 1024 && flagExecuteCode) {
       setShowAllCards(false);
+      setSelectedCard(skills[0].id);
+      setFlagExecuteCode(false);
     }
   };
 
@@ -35,7 +41,7 @@ export const SkillsComponent = () => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [flagExecuteCode]);
 
   return (
     <section id="Habilidades" className="flex flex-col gap-y-10 w-full">
