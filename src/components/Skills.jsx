@@ -16,6 +16,8 @@ export const SkillsComponent = () => {
   };
 
   const showInfoCard = (skillId) => {
+    if (!showAllCards) return;
+
     if (skillId !== selectedCard) {
       setSelectedCard(skillId);
     } else {
