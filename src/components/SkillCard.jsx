@@ -23,7 +23,7 @@ export const SkillCardComponent = ({
             onClick={() => buttonClick(skill.id)}
             className="inline lg:hidden text-white"
           >
-            CLICK
+            <img className="w-6" src="icons/arrow_down.svg" alt="" />
           </button>
         </div>
         <p
