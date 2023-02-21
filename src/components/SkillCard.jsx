@@ -23,7 +23,11 @@ export const SkillCardComponent = ({
             onClick={() => buttonClick(skill.id)}
             className="inline lg:hidden text-white"
           >
-            <img className="w-6" src="icons/arrow_down.svg" alt="" />
+            <img
+              className={(showInfo ? "-rotate-90" : "") + " w-6"}
+              src="icons/arrow_down.svg"
+              alt=""
+            />
           </button>
         </div>
         <p
