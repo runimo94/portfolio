@@ -1,4 +1,4 @@
-import IconTech from "../IconTech.jsx";
+import IconTech from "../Shared/IconTech.jsx";
 import "./SkillCard.css";
 
 export const SkillCardComponent = ({
