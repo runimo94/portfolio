@@ -109,3 +109,22 @@ export const dataSkills = {
     },
   ],
 };
+
+export const dataContact = {
+  email: "runimo94@gmail.com",
+  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, delectus? Qui, cupiditate! Repellat eius optio, rerum, commodi exercitationem quisquam distinctio sapiente dolorum dolor maiores id! Repudiandae voluptas, pariatur atque voluptatem optio reprehenderit eveniet maxime ullam cupiditate assumenda vel",
+  listButtons: [
+    {
+      icon: "icons/github.svg",
+      url: "https://github.com/runimo94",
+    },
+    {
+      icon: "icons/linkedin.svg",
+      url: "",
+    },
+  ],
+  formData: {
+    placeholderTitle: "Email...",
+    placeholderText: "Escribe tu mensaje...",
+  },
+};
