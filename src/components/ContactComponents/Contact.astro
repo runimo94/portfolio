@@ -1,0 +1,35 @@
+---
+import ButtonContacts from "./ButtonContacts.astro"
+import FormEmail from "./FormEmail.astro"
+import { dataContact } from "../../config/config";
+---
+
+<section id="Proyectos" class="flex flex-col gap-y-10 w-full">
+  <div class="flex flex-col px-5 md:px-0 gap-y-2">
+    <h1 class="text-white text-5xl font-Rubik text-center md:text-start">
+      CONTACTO
+    </h1>
+    <hr />
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 px-10 gap-8 text-white">
+    <div class="flex flex-col gap-y-8">
+      <p class="font-Rubik">{dataContact.text}</p>
+      <a href={"mailto:" + dataContact.email}>
+        <p class="font-bold font-LexendDeca text-center text-xl">{dataContact.email}</p>
+      </a>
+      <div class="flex w-full justify-center gap-x-5">
+        {
+          dataContact.listButtons.map((btn) => {
+            return (
+              <ButtonContacts url={btn.url} icon={btn.icon}/>
+            );
+          })
+        }
+      </div>
+    </div>
+
+    <FormEmail placeholderTitle={ dataContact.formData.placeholderTitle } placeholderText={ dataContact.formData.placeholderText }/>
+
+  </div>
+</section>
