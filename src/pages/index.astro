@@ -5,6 +5,7 @@ import Inicio from "../components/InicioComponents/Inicio.astro";
 import AboutMe from "../components/AboutComponents/Aboutme.astro";
 import Projects from "../components/ProjectsComponents/Projects.astro";
 import Skills from "../components/SkillsComponents/Skills.jsx";
+import Contact from "../components/ContactComponents/Contact.astro";
 ---
 
 <Layout>
@@ -21,6 +22,7 @@ import Skills from "../components/SkillsComponents/Skills.jsx";
         <AboutMe />
         <Projects />
         <Skills client:only/>
+        <Contact/>
         </div>
       </div>
 
