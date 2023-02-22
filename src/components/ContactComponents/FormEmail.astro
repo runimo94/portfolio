@@ -4,26 +4,161 @@ interface Props {
   placeholderText: string;
 }
 
-const {placeholderTitle, placeholderText} = Astro.props as Props
+const { placeholderTitle, placeholderText } = Astro.props as Props;
 ---
 
-<form class="flex flex-col gap-y-5 font-LexendDeca" onsubmit="handleSubmit(event)">
-  <input type="text" class="bg-slate-800 p-3 rounded-lg" placeholder={placeholderTitle} />
-  <textarea class="bg-slate-800 resize-none p-3 rounded-lg" name="" id="" cols="30" rows="10" placeholder={placeholderText}></textarea>
-  <button class="w-36 mx-auto bg-slate-700 p-3 rounded-lg" type="submit">Enviar</button>
+<form id="formContact" class="flex flex-col gap-y-5 font-LexendDeca">
+  <div class="flex flex-col gap-2">
+    <input
+      type="text"
+      id="email"
+      name="email"
+      class="bg-slate-800 p-3 rounded-lg"
+      placeholder={placeholderTitle}
+    />
+    <div id="emailErrorText" class="ml-2 hidden text-red-600 italic"></div>
+    <div id="emailSuccessText" class="ml-2 hidden text-green-600 italic"></div>
+  </div>
+  <div class="flex flex-col gap-2">
+    <textarea
+      id="body"
+      name="body"
+      class="bg-slate-800 resize-none p-3 rounded-lg"
+      cols="30"
+      rows="10"
+      placeholder={placeholderText}></textarea>
+    <div id="bodyErrorText" class="ml-2 hidden text-red-600 italic"></div>
+  </div>
+  <button class="bg-slate-800" type="submit">
+    <div class="svg-wrapper-1">
+      <div class="svg-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path fill="none" d="M0 0h24v24H0z"></path>
+          <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+        </svg>
+      </div>
+    </div>
+    <span>Enviar</span>
+  </button>
 </form>
 
 <script>
-  const handleSubmit = (event: any) => {
+  import emailjs from "@emailjs/browser";
+  emailjs.init("nd6SvexPJZzxaR7lN");
+
+  const form = document.getElementById("formContact");
+
+  form?.addEventListener("submit", (event) => {
     event.preventDefault();
-  };
+    const email = document.getElementById("email") as HTMLInputElement;
+    const body = document.getElementById("body") as HTMLTextAreaElement;
+    const errorEmailElem = document.getElementById(
+      "emailErrorText"
+    ) as HTMLElement;
+    const successEmailElem = document.getElementById(
+      "emailSuccessText"
+    ) as HTMLElement;
+    const errorBodyElem = document.getElementById(
+      "bodyErrorText"
+    ) as HTMLElement;
+
+    errorEmailElem.classList.add("hidden");
+    errorBodyElem.classList.add("hidden");
+    successEmailElem.classList.add("hidden");
+
+    let isError = false;
+
+    if (email?.value === "") {
+      errorEmailElem.classList.remove("hidden");
+      errorEmailElem.innerText = "*Este campo no puede estar vacio";
+      isError = true;
+    }
+
+    if (body?.value === "") {
+      errorBodyElem.classList.remove("hidden");
+      errorBodyElem.innerText = "*Este campo no puede estar vacio";
+      isError = true;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidEmail = emailRegex.test(email?.value);
+
+    if (!isValidEmail && email?.value !== "") {
+      errorEmailElem.classList.remove("hidden");
+      errorEmailElem.innerText = "*El email tiene un formato no válido";
+      isError = true;
+    }
+
+    if (!isError) {
+      emailjs
+        .sendForm("default_service", "template_pnslx4a", "#formContact")
+        .then(
+          function (response) {
+            successEmailElem.classList.remove("hidden");
+            successEmailElem.innerText = "El mensaje se ha enviado correctamente";
+            email.value = ""
+            body.value = ""
+          },
+          function (error) {
+            errorEmailElem.innerText = "El mensaje no se ha podido enviar"
+          }
+        );
+    }
+  });
 </script>
 
 <style>
-  button{
-    transition: 0.2s;
+  button {
+  font-family: inherit;
+  font-size: 20px;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
   }
-  button:hover{
-    transform: scale(1.05);
+
+  to {
+    transform: translateY(-0.1em);
   }
+}
 </style>
