@@ -1,0 +1,29 @@
+---
+interface Props {
+  placeholderTitle: string;
+  placeholderText: string;
+}
+
+const {placeholderTitle, placeholderText} = Astro.props as Props
+---
+
+<form class="flex flex-col gap-y-5 font-LexendDeca" onsubmit="handleSubmit(event)">
+  <input type="text" class="bg-slate-800 p-3 rounded-lg" placeholder={placeholderTitle} />
+  <textarea class="bg-slate-800 resize-none p-3 rounded-lg" name="" id="" cols="30" rows="10" placeholder={placeholderText}></textarea>
+  <button class="w-36 mx-auto bg-slate-700 p-3 rounded-lg" type="submit">Enviar</button>
+</form>
+
+<script>
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+  };
+</script>
+
+<style>
+  button{
+    transition: 0.2s;
+  }
+  button:hover{
+    transform: scale(1.05);
+  }
+</style>
