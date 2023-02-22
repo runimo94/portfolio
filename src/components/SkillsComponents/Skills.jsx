@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import SkillCard from "./SkillCard.jsx";
 import "./Skills.css";
 
-import { dataSkills } from "../config/config";
+import { dataSkills } from "../../config/config";
 const { skills } = dataSkills;
 
 export const SkillsComponent = () => {
