@@ -46,7 +46,10 @@ export const SkillsComponent = () => {
   }, [flagExecuteCode]);
 
   return (
-    <section id="Habilidades" className="flex flex-col gap-y-10 w-full">
+    <section
+      id="Habilidades"
+      className="skills-reveal flex flex-col gap-y-10 w-full"
+    >
       <div className="flex flex-col px-5 md:px-0 gap-y-2">
         <h1 className="text-white text-5xl font-Rubik text-center md:text-start">
           HABILIDADES

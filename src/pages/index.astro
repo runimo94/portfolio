@@ -17,11 +17,13 @@ import Contact from "../components/ContactComponents/Contact.astro";
         <Inicio />
       </div>
 
-      <div class="bg-gray-900 w-full flex justify-center py-12">
+      <div class="content-reveal bg-gray-900 w-full flex justify-center py-12">
         <div class="flex flex-col items-center container bg-gray-900 gap-y-28 ">
         <AboutMe />
         <Projects />
-        <Skills client:only/>
+        <div class="skills-reveal w-full">
+          <Skills client:only/>
+        </div>
         <Contact/>
         </div>
       </div>
