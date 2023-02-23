@@ -46,7 +46,7 @@ export const dataAboutMe = {
   image: "images/runimo94.png",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, vitae voluptatibus accusamus cum perferendis corporis soluta inventore repellendus, quam quia, dolores autem repudiandae sunt. Quia delectus, provident quo corporis dolorum quaerat rem illo reprehenderit earum vero magni eum distinctio, quibusdam quas quasi quod vitae minima id ullam aspernatur esse veritatis?",
   subtext:
-    "*Esta no es una imagen real. Es una imagen generada con Stable Diffusion, una IA generativa de imagenes. Usando un modelo entrenado por mi, con imagenes propias.",
+    "*Esta no es una foto real. Es una imagen generada con Stable Diffusion, una IA generativa de imagenes. Usando un modelo entrenado por mi, con fotos propias.",
 };
 
 export const dataProjects = {
