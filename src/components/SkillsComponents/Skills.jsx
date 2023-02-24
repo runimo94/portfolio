@@ -4,6 +4,7 @@ import SkillCard from "./SkillCard.jsx";
 import "./Skills.css";
 
 import { dataSkills } from "../../config/config";
+import hacktext from "../../utils/hacktextEffect.js";
 const { skills } = dataSkills;
 
 export const SkillsComponent = () => {
@@ -40,7 +41,7 @@ export const SkillsComponent = () => {
 
   useEffect(() => {
     handleResize();
-
+    hacktext();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [flagExecuteCode]);
@@ -51,7 +52,10 @@ export const SkillsComponent = () => {
       className="skills-reveal flex flex-col gap-y-10 w-full"
     >
       <div className="flex flex-col px-5 md:px-0 gap-y-2">
-        <h1 className="text-white text-5xl font-Rubik text-center md:text-start">
+        <h1
+          data-value="HABILIDADES"
+          className="hacktext text-white text-5xl text-center md:text-start"
+        >
           HABILIDADES
         </h1>
         <hr />
@@ -64,10 +68,12 @@ export const SkillsComponent = () => {
               <button
                 key={skill.id}
                 onClick={() => handleButtonClick(skill.id)}
+                data-value={skill.skillName}
                 className={
                   (selectedCard === skill.id
                     ? "skill-button-activate"
-                    : "skill-button-disable") + " button-skill"
+                    : "skill-button-disable") +
+                  " button-skill font-mono hacktext_click_effect"
                 }
               >
                 {skill.skillName}
