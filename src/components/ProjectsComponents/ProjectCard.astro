@@ -13,7 +13,7 @@ const { image, title, urlCode, url, techIcons } = Astro.props as Props;
 ---
 
 <div
-  class="w-[300px] h-[480px] lg:w-[330px] lg:h-[500px] xl:w-[300px] xl:h-[500px] flex flex-col justify-between pb-5 shadow-2xl rounded-lg gap-y-4 backdrop-filter backdrop-blur bg-black/50"
+  class="card w-[300px] h-[480px] lg:w-[330px] lg:h-[500px] xl:w-[300px] xl:h-[500px] flex flex-col justify-between pb-5 shadow-2xl rounded-lg gap-y-4 backdrop-filter backdrop-blur bg-black/50"
 >
   <a href={url}
     ><img class="rounded-t-lg" src={image} alt="imagen del proyecto" /></a
@@ -47,3 +47,12 @@ const { image, title, urlCode, url, techIcons } = Astro.props as Props;
     </a>
   </div>
 </div>
+
+<style>
+  .card{
+    transition: 0.2s;
+  }
+  .card:hover {
+    transform: scale(1.1);
+  }
+</style>
