@@ -45,6 +45,7 @@ export const dataInicio = {
 };
 
 export const dataAboutMe = {
+  headerText: "Sobre mi",
   image: "images/runimo94.png",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, vitae voluptatibus accusamus cum perferendis corporis soluta inventore repellendus, quam quia, dolores autem repudiandae sunt. Quia delectus, provident quo corporis dolorum quaerat rem illo reprehenderit earum vero magni eum distinctio, quibusdam quas quasi quod vitae minima id ullam aspernatur esse veritatis?",
   subtext:
@@ -52,6 +53,7 @@ export const dataAboutMe = {
 };
 
 export const dataProjects = {
+  headerText: "Proyectos",
   listProjects: [
     {
       image: "images/project1.png",
@@ -78,6 +80,7 @@ export const dataProjects = {
 };
 
 export const dataSkills = {
+  headerText: "Habilidades",
   skills: [
     {
       id: "FrontEnd",
@@ -113,6 +116,7 @@ export const dataSkills = {
 };
 
 export const dataContact = {
+  headerText: "Contacto",
   email: "runimo94@gmail.com",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, delectus? Qui, cupiditate! Repellat eius optio, rerum, commodi exercitationem quisquam distinctio sapiente dolorum dolor maiores id! Repudiandae voluptas, pariatur atque voluptatem optio reprehenderit eveniet maxime ullam cupiditate assumenda vel",
   listButtons: [
