@@ -1,56 +1,58 @@
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const hacktext = () => {
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-setInterval(() => {
-  document.querySelectorAll(".hacktext").forEach((elem) => {
+  const animateText = (elem, event = null) => {
     let iteration = 0;
     let interval = null;
 
     clearInterval(interval);
 
     interval = setInterval(() => {
-      elem.innerText = elem.dataset.value
+      let target = event ? event.target : elem;
+
+      target.innerText = target.dataset.value
         .split("")
         .map((_letter, index) => {
           if (index < iteration) {
-            return elem.dataset.value[index];
+            return target.dataset.value[index];
           }
           return letters[Math.floor(Math.random() * 26)];
         })
         .join("");
 
-      if (iteration >= elem.dataset.value.length) {
-        clearInterval(interval);
-      }
-
-      iteration += 1 / 3;
-    }, 30);
-  });
-}, 5000);
-
-document.querySelectorAll(".hacktext_hover_effect").forEach((elem) => {
-  elem.onmouseover = (event) => {
-    let iteration = 0;
-    let interval = null;
-
-    clearInterval(interval);
-
-    interval = setInterval(() => {
-      event.target.innerText = event.target.innerText
-        .split("")
-        .map((_letter, index) => {
-          if (index < iteration) {
-            return event.target.dataset.value[index];
-          }
-
-          return letters[Math.floor(Math.random() * 26)];
-        })
-        .join("");
-
-      if (iteration >= event.target.dataset.value.length) {
+      if (iteration >= target.dataset.value.length) {
         clearInterval(interval);
       }
 
       iteration += 1 / 3;
     }, 20);
   };
-});
+
+  const animateOnHover = (elem) => {
+    elem.addEventListener("mouseover", (event) => {
+      animateText(elem, event);
+    });
+  };
+
+  const animateOnClick = (elem) => {
+    elem.addEventListener("click", (event) => {
+      animateText(elem, event);
+    });
+  };
+
+  setInterval(() => {
+    document.querySelectorAll(".hacktext").forEach((elem) => {
+      animateText(elem);
+    });
+  }, 5000);
+
+  document.querySelectorAll(".hacktext_hover_effect").forEach((elem) => {
+    animateOnHover(elem);
+  });
+
+  document.querySelectorAll(".hacktext_click_effect").forEach((elem) => {
+    animateOnClick(elem);
+  });
+};
+
+export default hacktext;
