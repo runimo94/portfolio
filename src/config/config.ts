@@ -25,7 +25,8 @@ export const dataHeader = {
 
 export const dataInicio = {
   textHeader: "Hola, soy ",
-  textHeader2: "<Desarrollador fullstack/>",
+  textHeader2: "<Desarrollador",
+  textHeader3: "fullstack/>",
   name: "Rubén Nicolás",
   listButtons: [
     {
