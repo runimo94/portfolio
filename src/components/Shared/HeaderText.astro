@@ -1,0 +1,10 @@
+---
+interface Props {
+  text:string;
+}
+
+const { text } = Astro.props as Props
+---
+
+<h1 class="hacktext uppercase text-white text-5xl text-center md:text-start" data-value={ text }>{ text }</h1>
+<hr>

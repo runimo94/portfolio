@@ -1,12 +1,12 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+import HeaderText from "../Shared/HeaderText.astro";
 import {dataProjects} from "../../config/config"
 ---
 
 <section id="Proyectos" class="projects-reveal flex flex-col gap-y-10 w-full">
   <div class="flex flex-col px-5 md:px-0 gap-y-2">
-    <h1 class="text-white text-5xl font-Rubik text-center md:text-start">PROYECTOS</h1>
-    <hr>
+    <HeaderText text={dataProjects.headerText}/>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-y-10">

@@ -1,11 +1,11 @@
 ---
+import HeaderText from "../Shared/HeaderText.astro";
 import { dataAboutMe } from "../../config/config";
 ---
 
 <section id="SobreMi" class="aboutme-reveal flex flex-col gap-y-10 w-full">
   <div class="flex flex-col px-5 md:px-0 gap-y-2">
-    <h1 class="text-white text-5xl font-Rubik text-center md:text-start">SOBRE MI</h1>
-    <hr>
+    <HeaderText text={dataAboutMe.headerText}/>
   </div>
   <div class="flex flex-col md:flex-row items-center justify-center gap-10">
     <div class="flex flex-col items-center gap-y-2">

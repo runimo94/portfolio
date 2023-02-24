@@ -1,15 +1,13 @@
 ---
 import ButtonContacts from "./ButtonContacts.astro"
 import FormEmail from "./FormEmail.astro"
+import HeaderText from "../Shared/HeaderText.astro";
 import { dataContact } from "../../config/config";
 ---
 
 <section id="Contacto" class="contact-reveal flex flex-col gap-y-10 w-full">
   <div class="flex flex-col px-5 md:px-0 gap-y-2">
-    <h1 class="text-white text-5xl font-Rubik text-center md:text-start">
-      CONTACTO
-    </h1>
-    <hr />
+    <HeaderText text={dataContact.headerText}/>
   </div>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 px-10 gap-8 text-white">
