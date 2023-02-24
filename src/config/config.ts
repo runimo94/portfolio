@@ -24,8 +24,9 @@ export const dataHeader = {
 };
 
 export const dataInicio = {
-  textHeader: "Hola, soy Rubén Nicolas",
+  textHeader: "Hola, soy ",
   textHeader2: "<Desarrollador fullstack/>",
+  name: "Rubén Nicolás",
   listButtons: [
     {
       text: "Descarga CV",
