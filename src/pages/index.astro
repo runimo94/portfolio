@@ -17,16 +17,32 @@ import Contact from "../components/ContactComponents/Contact.astro";
         <Inicio />
       </div>
 
-      <div class="content-reveal w-full flex justify-center ">
+      <div class="content-reveal w-full flex justify-center">
         <div class="flex flex-col items-center container gap-y-28 py-20">
-        <AboutMe />
-        <Projects />
-        <div class="skills-reveal w-full">
-          <Skills client:only/>
-        </div>
-        <Contact/>
+          <AboutMe />
+          <Projects />
+          <div class="skills-reveal w-full">
+            <Skills client:only />
+          </div>
+          <Contact />
         </div>
       </div>
     </div>
   </div>
 </Layout>
+
+<style is:global>
+  .hacktext_hover_effect,
+  .hacktext {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+    color: white;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  }
+
+  .hacktext_hover_effect:hover {
+    background-color: white;
+    color: black;
+  }
+</style>
