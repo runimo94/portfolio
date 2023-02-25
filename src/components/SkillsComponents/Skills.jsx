@@ -73,7 +73,7 @@ export const SkillsComponent = () => {
                   (selectedCard === skill.id
                     ? "skill-button-activate"
                     : "skill-button-disable") +
-                  " button-skill font-mono hacktext_click_effect"
+                  " button-skill font-mono font-bold text-lg hacktext_click_effect"
                 }
               >
                 {skill.skillName}
