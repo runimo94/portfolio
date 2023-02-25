@@ -3,10 +3,10 @@ import { dataHeader } from "../../config/config";
 ---
 
 <nav
-  class="fixed z-10 w-full flex justify-end md:justify-center items-center p-4 h-16 backdrop-filter backdrop-blur bg-black/30"
+  class="fixed z-10 w-full flex justify-end md:justify-center items-center p-4 h-16 bg-colorBg"
 >
   <div
-    class="hidden md:flex flex-row gap-x-6 md:gap-x-8 lg:gap-x-20 xl:gap-x-32 text-xl text-white whitespace-nowrap"
+    class="hidden md:flex flex-row font-bold text-xl gap-x-2 text-white whitespace-nowrap"
   >
     {
       dataHeader.listSections.map((section) => {
@@ -27,7 +27,7 @@ import { dataHeader } from "../../config/config";
 
 <nav id="rigthSideNav" class="hidden">
   <div
-    class="z-20 fixed flex flex-col gap-y-6 p-5 top-0 bottom-0 right-0 w-72 backdrop-filter backdrop-blur bg-black/70"
+    class="z-20 fixed flex flex-col gap-y-6 p-5 top-0 bottom-0 right-0 w-72 bg-colorBgDarker"
   >
     <div class="w-full flex justify-end pr-3">
       <button class="togglemenu rounded-xl hover:bg-white/5 py-1 px-3">
