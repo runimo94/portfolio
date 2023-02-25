@@ -1,5 +1,5 @@
 const hacktext = () => {
-  const letters = "%$&·$//&(%())=?¡'|º";
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   const animateText = (elem, event = null) => {
     let iteration = 0;
