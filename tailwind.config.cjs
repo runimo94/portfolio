@@ -18,6 +18,8 @@ module.exports = {
         color1Darker: "#501f7d",
         color2: "#10c0ec",
         color2Darker: "#044252",
+        colorBg: "#1f2d46",
+        colorBgDarker: "#182236",
       },
     },
   },
