@@ -54,7 +54,7 @@ export const SkillsComponent = () => {
       <div className="flex flex-col px-5 md:px-0 gap-y-2">
         <h1
           data-value="HABILIDADES"
-          className="hacktext text-white text-5xl text-center md:text-start"
+          className="text-white text-5xl text-center md:text-start"
         >
           HABILIDADES
         </h1>
