@@ -1,5 +1,5 @@
 const hacktext = () => {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const letters = "%$&·$//&(%())=?¡'|º";
 
   const animateText = (elem, event = null) => {
     let iteration = 0;
@@ -16,7 +16,7 @@ const hacktext = () => {
           if (index < iteration) {
             return target.dataset.value[index];
           }
-          return letters[Math.floor(Math.random() * 26)];
+          return letters[Math.floor(Math.random() * letters.length)];
         })
         .join("");
 
@@ -25,7 +25,7 @@ const hacktext = () => {
       }
 
       iteration += 1 / 3;
-    }, 20);
+    }, 30);
   };
 
   const animateOnHover = (elem) => {
