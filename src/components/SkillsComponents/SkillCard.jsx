@@ -47,13 +47,7 @@ export const SkillCardComponent = ({
           </p>
           <div className={"flex items-center justify-center gap-x-6 pb-10"}>
             {skill.techIcons.map((tech, index) => {
-              return (
-                <IconTech
-                  key={index}
-                  classes="w-7 md:w-10 lg:w-16"
-                  tech={tech}
-                />
-              );
+              return <IconTech key={index} classes="w-7 md:w-10" tech={tech} />;
             })}
           </div>
         </div>
