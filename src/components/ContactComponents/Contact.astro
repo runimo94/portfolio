@@ -1,33 +1,43 @@
 ---
-import ButtonContacts from "./ButtonContacts.astro"
-import FormEmail from "./FormEmail.astro"
+import ButtonContacts from "./ButtonContacts.astro";
+import FormEmail from "./FormEmail.astro";
 import HeaderText from "../Shared/HeaderText.astro";
 import { dataContact } from "../../config/config";
 ---
 
 <section id="Contacto" class="contact-reveal flex flex-col gap-y-10 w-full">
   <div class="flex flex-col px-5 md:px-0 gap-y-2">
-    <HeaderText text={dataContact.headerText}/>
+    <HeaderText text={dataContact.headerText} />
   </div>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 px-10 gap-8 text-white">
-    <div class="flex flex-col justify-start gap-y-8">
-      <p class="font-Rubik">{dataContact.text}</p>
-      <a href={"mailto:" + dataContact.email} rel="noopener noreferrer">
-        <p class="font-bold font-sans text-center text-2xl">{dataContact.email}</p>
-      </a>
+    <div class="flex flex-col items-center gap-y-8">
+      <p
+        class="font-Rubik text-base md:text-xl lg:text-base xl:text-lg 2xl:text-xl"
+      >
+        {dataContact.text}
+      </p>
+      <div class="hover:bg-white hover:text-black px-3 py-1 rounded-xl">
+        <a
+          href={"mailto:" + dataContact.email}
+          rel="noopener noreferrer"
+          class="font-bold font-sans text-2xl"
+        >
+          {dataContact.email}
+        </a>
+      </div>
       <div class="flex w-full justify-center gap-x-5">
         {
           dataContact.listButtons.map((btn) => {
-            return (
-              <ButtonContacts url={btn.url} icon={btn.icon}/>
-            );
+            return <ButtonContacts url={btn.url} icon={btn.icon} />;
           })
         }
       </div>
     </div>
 
-    <FormEmail placeholderTitle={ dataContact.formData.placeholderTitle } placeholderText={ dataContact.formData.placeholderText }/>
-
+    <FormEmail
+      placeholderTitle={dataContact.formData.placeholderTitle}
+      placeholderText={dataContact.formData.placeholderText}
+    />
   </div>
 </section>
