@@ -96,13 +96,13 @@ export const dataSkills = {
     },
     {
       id: "Mobile",
-      skillName: "Desarrollo Movil",
+      skillName: "Movil",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aut debitis possimus repudiandae harum culpa, amet blanditiis vitae, dolorum dignissimos illum aliquam suscipit, itaque odio libero? Aliquid maxime asperiores unde quaerat, sequi illum voluptate reiciendis magni aut ipsam harum quidem eaque fugit saepe? Odit, quod sequi commodi dolores eaque illum.",
       techIcons: ["android", "xamarin", "xaml"],
     },
     {
       id: "Desktop",
-      skillName: "Desarrollo de Escritorio",
+      skillName: "Escritorio",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aut debitis possimus repudiandae harum culpa, amet blanditiis vitae, dolorum dignissimos illum aliquam suscipit, itaque odio libero? Aliquid maxime asperiores unde quaerat, sequi illum voluptate reiciendis magni aut ipsam harum quidem eaque fugit saepe? Odit, quod sequi commodi dolores eaque illum.",
       techIcons: ["dotnet", "xaml"],
     },
