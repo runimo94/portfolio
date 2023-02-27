@@ -2,16 +2,18 @@
 interface Props {
   text: string;
   url: string;
+  isDownload: boolean;
 }
 
-const { text, url } = Astro.props as Props;
+const { text, url, isDownload } = Astro.props as Props;
 ---
 
 <a
   href={url}
   target="_blank"
   rel="noopener noreferrer"
-  class="font-mono text-lg sm:text-base lg:text-xl"><span>{text}</span></a
+  class="font-mono text-lg sm:text-base lg:text-xl"
+  download={isDownload ? "runimo_cv" : undefined}><span>{text}</span></a
 >
 
 <style>

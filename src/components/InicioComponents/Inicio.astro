@@ -34,7 +34,7 @@ import { dataInicio } from "../../config/config";
         dataInicio.listButtons.map((btn) => {
           return (
             <>
-              <Button text={btn.text} url={btn.url} />
+              <Button text={btn.text} url={btn.url} isDownload={btn.isDownload} />
             </>
           );
         })
