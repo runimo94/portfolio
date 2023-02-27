@@ -31,15 +31,18 @@ export const dataInicio = {
   listButtons: [
     {
       text: "Descarga CV",
-      url: "",
+      url: "/documents/runimo_cv.pdf",
+      isDownload: true,
     },
     {
       text: "GitHub",
       url: "https://github.com/runimo94",
+      isDownload: false,
     },
     {
       text: "LinkedIn",
-      url: "",
+      url: "https://www.linkedin.com/in/rubén-nicolás-morales",
+      isDownload: false,
     },
   ],
 };
@@ -72,8 +75,8 @@ export const dataProjects = {
     {
       image: "images/project3.png",
       title: "Portfolio personal",
-      urlCode: "https://github.com/runimo94/landing-page-warcraft",
-      url: "https://runimo94.github.io/landing-page-warcraft/",
+      urlCode: "https://github.com/runimo94/portfolio",
+      url: "",
       techIcons: ["html", "tailwind", "javascript", "astro", "react"],
     },
   ],
@@ -121,12 +124,12 @@ export const dataContact = {
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, delectus? Qui, cupiditate! Repellat eius optio, rerum, commodi exercitationem quisquam distinctio sapiente dolorum dolor maiores id! Repudiandae voluptas, pariatur atque voluptatem optio reprehenderit eveniet maxime ullam cupiditate assumenda vel",
   listButtons: [
     {
-      icon: "icons/github.svg",
+      icon: "/icons/github.svg",
       url: "https://github.com/runimo94",
     },
     {
-      icon: "icons/linkedin.svg",
-      url: "",
+      icon: "/icons/linkedin.svg",
+      url: "https://www.linkedin.com/in/rubén-nicolás-morales",
     },
   ],
   formData: {
