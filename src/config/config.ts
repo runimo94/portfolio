@@ -50,7 +50,7 @@ export const dataInicio = {
 export const dataAboutMe = {
   headerText: "Sobre mi",
   image: "/images/runimo94.webp",
-  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, vitae voluptatibus accusamus cum perferendis corporis soluta inventore repellendus, quam quia, dolores autem repudiandae sunt. Quia delectus, provident quo corporis dolorum quaerat rem illo reprehenderit earum vero magni eum distinctio, quibusdam quas quasi quod vitae minima id ullam aspernatur esse veritatis?",
+  text: "Soy Rubén Nicolás, desarrollador fullstack con más de 3 años de experiencia en el desarrollo fullstack. Desde que entré por primera vez en un foro, quedé fascinado con el desarrollo de software y he estado aprendiendo por mi cuenta y formalmente para sumergirme en este mundo que tanto me apasiona. Actualmente, estoy ampliando mis conocimientos en el desarrollo web y estoy emocionado por poner en práctica mis nuevas habilidades.",
   subtext:
     "*Esta no es una foto real. Es una imagen generada con Stable Diffusion, una IA generativa de imagenes. Usando un modelo entrenado por mi, con fotos propias.",
 };
@@ -121,7 +121,7 @@ export const dataSkills = {
 export const dataContact = {
   headerText: "Contacto",
   email: "runimo94@gmail.com",
-  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, delectus? Qui, cupiditate! Repellat eius optio, rerum, commodi exercitationem quisquam distinctio sapiente dolorum dolor maiores id! Repudiandae voluptas, pariatur atque voluptatem optio reprehenderit eveniet maxime ullam cupiditate assumenda vel",
+  text: "¡Gracias por visitar mi portafolio! Si estás interesado en conocer más acerca de mis proyectos o te gustaría contactarme para discutir una posible colaboración, por favor no dudes en hacerlo. Puedes hacerlo a través del formulario de contacto que aparece a continuación o mediante mi correo electrónico. También puedes conectarte conmigo a través de mi perfil en LinkedIn o revisar algunos de mis proyectos en GitHub.",
   listButtons: [
     {
       icon: "/icons/github.svg",
