@@ -7,7 +7,7 @@ interface Props {
 const { url, icon } = Astro.props as Props
 ---
 
-<a href={url}>
+<a href={url} target="_blank" rel="noopener noreferrer">
   <img class="w-6" src={icon} alt="" />
 </a>
 

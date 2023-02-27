@@ -13,7 +13,7 @@ import { dataContact } from "../../config/config";
   <div class="grid grid-cols-1 lg:grid-cols-2 px-10 gap-8 text-white">
     <div class="flex flex-col justify-start gap-y-8">
       <p class="font-Rubik">{dataContact.text}</p>
-      <a href={"mailto:" + dataContact.email}>
+      <a href={"mailto:" + dataContact.email} rel="noopener noreferrer">
         <p class="font-bold font-sans text-center text-2xl">{dataContact.email}</p>
       </a>
       <div class="flex w-full justify-center gap-x-5">

@@ -10,11 +10,19 @@ import { dataHeader } from "../../config/config";
   >
     {
       dataHeader.listSections.map((section) => {
-        return(
+        return (
           <>
-            <a href={section.id} data-value={section.text} class="hacktext_hover_effect uppercase py-3 px-5">{section.text}</a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={section.id}
+              data-value={section.text}
+              class="hacktext_hover_effect uppercase py-3 px-5"
+            >
+              {section.text}
+            </a>
           </>
-        )
+        );
       })
     }
   </div>
@@ -35,14 +43,24 @@ import { dataHeader } from "../../config/config";
       </button>
     </div>
 
-    <div class="text-white font-semibold text-xl flex flex-col gap-y-5 items-center font-Rubik">
+    <div
+      class="text-white font-semibold text-xl flex flex-col gap-y-5 items-center font-Rubik"
+    >
       {
         dataHeader.listSections.map((section) => {
-          return(
+          return (
             <>
-              <a href={section.id} data-value={section.text} class="w-full uppercase text-2xl hacktext_hover_effect text-center py-3 px-5">{section.text}</a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={section.id}
+                data-value={section.text}
+                class="w-full uppercase text-2xl hacktext_hover_effect text-center py-3 px-5"
+              >
+                {section.text}
+              </a>
             </>
-          )
+          );
         })
       }
     </div>
@@ -63,8 +81,8 @@ import { dataHeader } from "../../config/config";
   });
 
   anchorSideNav.forEach((a) => {
-    a.addEventListener("click", toggleMenu)
-  })
+    a.addEventListener("click", toggleMenu);
+  });
 
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 640) {

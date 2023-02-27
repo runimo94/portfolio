@@ -15,7 +15,7 @@ const { image, title, urlCode, url, techIcons } = Astro.props as Props;
 <div
   class="card w-[300px] h-[480px] lg:w-[330px] lg:h-[500px] xl:w-[300px] xl:h-[500px] flex flex-col justify-between pb-5 shadow-2xl rounded-lg gap-y-4 backdrop-filter backdrop-blur bg-black/50"
 >
-  <a href={url}
+  <a target="_blank" rel="noopener noreferrer" href={url}
     ><img class="rounded-t-lg" src={image} alt="imagen del proyecto" /></a
   >
   <h1 class="text-white text-xl text-center p-3 font-LexendDeca">
@@ -32,6 +32,8 @@ const { image, title, urlCode, url, techIcons } = Astro.props as Props;
 
   <div class="flex flex-row justify-center gap-x-4">
     <a
+      target="_blank"
+      rel="noopener noreferrer"
       href={urlCode}
       class="flex items-center justify-center text-white text-lg text-center font-LexendDeca w-32 h-12 hover:bg-white/10"
     >
@@ -39,6 +41,8 @@ const { image, title, urlCode, url, techIcons } = Astro.props as Props;
       Código
     </a>
     <a
+      target="_blank"
+      rel="noopener noreferrer"
       href={url}
       class="flex items-center justify-center text-white text-lg text-center font-LexendDeca w-32 h-12 hover:bg-white/10"
     >
@@ -49,7 +53,7 @@ const { image, title, urlCode, url, techIcons } = Astro.props as Props;
 </div>
 
 <style>
-  .card{
+  .card {
     transition: 0.2s;
   }
   .card:hover {
