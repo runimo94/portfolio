@@ -49,7 +49,7 @@ export const dataInicio = {
 
 export const dataAboutMe = {
   headerText: "Sobre mi",
-  image: "/images/runimo94.png",
+  image: "/images/runimo94.webp",
   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, vitae voluptatibus accusamus cum perferendis corporis soluta inventore repellendus, quam quia, dolores autem repudiandae sunt. Quia delectus, provident quo corporis dolorum quaerat rem illo reprehenderit earum vero magni eum distinctio, quibusdam quas quasi quod vitae minima id ullam aspernatur esse veritatis?",
   subtext:
     "*Esta no es una foto real. Es una imagen generada con Stable Diffusion, una IA generativa de imagenes. Usando un modelo entrenado por mi, con fotos propias.",
@@ -59,21 +59,21 @@ export const dataProjects = {
   headerText: "Proyectos",
   listProjects: [
     {
-      image: "/images/project1.png",
+      image: "/images/project1.webp",
       title: "MonsterCat Release Album Page Clone",
       urlCode: "https://github.com/runimo94/album-release-page",
       url: "https://runimo94.github.io/album-release-page/",
       techIcons: ["html", "tailwind", "javascript", "angular"],
     },
     {
-      image: "/images/project2.png",
+      image: "/images/project2.webp",
       title: "World of Warcraft Landing Page Clone",
       urlCode: "https://github.com/runimo94/landing-page-warcraft",
       url: "https://runimo94.github.io/landing-page-warcraft/",
       techIcons: ["html", "tailwind", "javascript", "angular"],
     },
     {
-      image: "/images/project3.png",
+      image: "/images/project3.webp",
       title: "Portfolio personal",
       urlCode: "https://github.com/runimo94/portfolio",
       url: "",
