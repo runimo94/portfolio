@@ -1,46 +1,29 @@
-# Astro Starter Kit: Minimal
+# Portfolio Web
 
-```
-npm create astro@latest -- --template minimal
-```
+Este es mi portfolio web, donde comparto información sobre mis habilidades y experiencia en el desarrollo de software. Aquí, podrás encontrar información sobre los proyectos que he realizado, mis enfoques de programación, y las herramientas que utilizo.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
+## Enfoques de Programación
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+En mi portfolio, puedes encontrar información sobre mis experiencias en los siguientes enfoques de programación:
 
-## 🚀 Project Structure
+- Frontend
+- Backend
+- Movil
+- Escritorio
+- Herramientas e IDEs
 
-Inside of your Astro project, you'll see the following folders and files:
+Para cada uno de estos enfoques, he proporcionado información sobre mis habilidades y experiencia, así como las tecnologías que he utilizado.
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Proyectos
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+En mi portfolio, también puedes encontrar información sobre los proyectos que he realizado. He incluido descripciones detalladas de los proyectos, así como enlaces a los repositorios en GitHub donde se encuentran los códigos fuente.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Tecnologías y Herramientas
 
-Any static assets, like images, can be placed in the `public/` directory.
+En mi portfolio, también he incluido información sobre las herramientas y tecnologías que utilizo para el desarrollo de software. He proporcionado información sobre las herramientas de desarrollo integrado (IDEs), así como sobre otras herramientas y tecnologías que utilizo.
 
-## 🧞 Commands
+## Contribuciones y Contacto
 
-All commands are run from the root of the project, from a terminal:
+Si quieres ponerte en contacto conmigo puedes encontrar mi información de contacto en mi portfolio.
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+¡Gracias por visitar mi portfolio!
