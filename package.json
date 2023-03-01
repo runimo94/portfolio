@@ -20,5 +20,8 @@
 		"react-dom": "^18.2.0",
 		"scrollreveal": "^4.0.9",
 		"tailwindcss": "^3.2.6"
+	},
+	"devDependencies": {
+		"gh-pages": "^5.0.0"
 	}
 }
