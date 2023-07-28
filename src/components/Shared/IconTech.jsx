@@ -22,6 +22,7 @@ const IconDict = {
   photoshop: "icons/ps.svg",
   react: "icons/react.svg",
   tailwind: "icons/tailwindcss.svg",
+  typescript: "icons/typescript.svg",
   xamarin: "icons/xamarin.svg",
   xaml: "icons/xaml.svg",
 };
