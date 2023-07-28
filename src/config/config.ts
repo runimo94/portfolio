@@ -31,7 +31,7 @@ export const dataInicio = {
   listButtons: [
     {
       text: "Descarga CV",
-      url: "/documents/runimo_cv.pdf",
+      url: "runimo_cv.pdf",
       isDownload: true,
     },
     {
