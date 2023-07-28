@@ -2,7 +2,7 @@
 
 Este es mi portfolio web, donde comparto información sobre mis habilidades y experiencia en el desarrollo de software. Aquí, podrás encontrar información sobre los proyectos que he realizado, mis enfoques de programación, y las herramientas que utilizo.
 
-Portfolio: https://runimo.surge.sh/
+Portfolio: https://runimo.netlify.app
 
 ## Enfoques de Programación
 
