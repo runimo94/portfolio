@@ -63,14 +63,14 @@ export const dataProjects = {
       title: "MonsterCat Release Album Page Clone",
       urlCode: "https://github.com/runimo94/album-release-page",
       url: "https://runimo94.github.io/album-release-page/",
-      techIcons: ["html", "tailwind", "javascript", "angular"],
+      techIcons: ["html", "tailwind", "typescript", "angular"],
     },
     {
       image: "/images/project2.webp",
       title: "World of Warcraft Landing Page Clone",
       urlCode: "https://github.com/runimo94/landing-page-warcraft",
       url: "https://runimo94.github.io/landing-page-warcraft/",
-      techIcons: ["html", "tailwind", "javascript", "angular"],
+      techIcons: ["html", "tailwind", "typescript", "angular"],
     },
     {
       image: "/images/project3.webp",
@@ -89,7 +89,15 @@ export const dataSkills = {
       id: "FrontEnd",
       skillName: "FrontEnd",
       text: "La programación Frontend es definitivamente mi enfoque favorito. Me encanta trabajar con HTML, CSS y Javascript para crear interfaces de usuario atractivas y funcionales. Además, he aprendido a utilizar herramientas como Angular, Tailwind y Astro para hacer el proceso de desarrollo aún más fácil y eficiente.",
-      techIcons: ["html", "css", "angular", "tailwind", "javascript", "astro"],
+      techIcons: [
+        "html",
+        "css",
+        "angular",
+        "tailwind",
+        "javascript",
+        "typescript",
+        "astro",
+      ],
     },
     {
       id: "Mobile",
